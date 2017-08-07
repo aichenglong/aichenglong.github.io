@@ -3,15 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | ACL</title>
+  <title>jdk | ACL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ACL">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="jdk 安装1.安装条件安装系统: centos7安装版本: jdk-8u144-linux-x64.tar.gz">
+<meta name="keywords" content="java jdk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jdk">
+<meta property="og:url" content="http://yoursite.com/2017/08/06/jdk/index.html">
 <meta property="og:site_name" content="ACL">
+<meta property="og:description" content="jdk 安装1.安装条件安装系统: centos7安装版本: jdk-8u144-linux-x64.tar.gz">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/08/06/jdk/jdk/jdkUninstall.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/08/06/jdk/jdk/javaCheck.png">
+<meta property="og:updated_time" content="2017-08-06T15:00:36.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ACL">
+<meta name="twitter:title" content="jdk">
+<meta name="twitter:description" content="jdk 安装1.安装条件安装系统: centos7安装版本: jdk-8u144-linux-x64.tar.gz">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/06/jdk/jdk/jdkUninstall.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ACL" type="application/atom+xml">
   
@@ -64,215 +72,81 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/maven/" class="archive-article-date">
-  <time datetime="2017-08-06T14:53:04.000Z" itemprop="datePublished">8月 6</time>
+        <section id="main"><article id="post-jdk" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/06/jdk/" class="article-date">
+  <time datetime="2017-08-06T13:37:59.000Z" itemprop="datePublished">2017-08-06</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java-jdk/">java jdk</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/maven/">maven</a>
+    <h1 class="article-title" itemprop="name">
+      jdk
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/jdk/" class="archive-article-date">
-  <time datetime="2017-08-06T13:37:59.000Z" itemprop="datePublished">8月 6</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/jdk/">jdk</a>
-    </h1>
-  
+        <h3 id="jdk-安装"><a href="#jdk-安装" class="headerlink" title="jdk 安装"></a>jdk 安装</h3><h4 id="1-安装条件"><a href="#1-安装条件" class="headerlink" title="1.安装条件"></a>1.安装条件</h4><p>安装系统: centos7<br>安装版本: jdk-8u144-linux-x64.tar.gz</p>
+<a id="more"></a>
+<h4 id="2-安装步骤"><a href="#2-安装步骤" class="headerlink" title="2.安装步骤:"></a>2.安装步骤:</h4><h5 id="1-卸载openjdk"><a href="#1-卸载openjdk" class="headerlink" title="1.卸载openjdk"></a>1.卸载openjdk</h5><p>卸载centos7自带的openjdk<br>–查看jdk版本: java -version<br>–查看有哪些jdk: rpm -qa|grep java<br>–卸载jdk: rpm -e –nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64(rpm -qa 查询出来的jdk版本)<br>  rpm -e –nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64(rpm -qa 查询出来的jdk版本带headless)<br><img src="jdk/jdkUninstall.jpg" alt="jdk_uninstall"></p>
+<h5 id="2-安装jdk"><a href="#2-安装jdk" class="headerlink" title="2.安装jdk"></a>2.安装jdk</h5><ol>
+<li>下载 jdk-8u144-linux-x64.tar.gz 并上传到 /opt 目录下 并解压 tar zxvf jdk-8u144-linux-x64.tar.gz</li>
+<li>创建软连接: ln -s /opt/jdk1.8.0_144 /opt/jdk</li>
+<li><p>配置环境变量 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/opt/jdk</div><div class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar </div><div class="line">export PATH=$PATH:$JAVA_HOME/bin</div></pre></td></tr></table></figure>
+</li>
+<li><p>source /etc/profile ← 使配置生效</p>
+</li>
+</ol>
+<h5 id="3-校验jdk是否安装成功"><a href="#3-校验jdk是否安装成功" class="headerlink" title="3.校验jdk是否安装成功"></a>3.校验jdk是否安装成功</h5><p>java -version: </p>
+<p><img src="jdk/javaCheck.png" alt="java check"></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/nexus/" class="archive-article-date">
-  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">8月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/nexus/">nexus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/05/gitLab/" class="archive-article-date">
-  <time datetime="2017-08-04T23:39:29.000Z" itemprop="datePublished">8月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/06/jdk/" data-id="cj61giqa6000c48vh9dquoppi" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/gitLab/">gitLib</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/04/centos7/" class="archive-article-date">
-  <time datetime="2017-08-04T15:23:18.000Z" itemprop="datePublished">8月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/centos7/">centos7</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java-jdk/">java jdk</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/06/maven/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          maven
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/06/nexus/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">nexus</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/hadoop-hive/" class="archive-article-date">
-  <time datetime="2017-08-03T09:26:51.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/hadoop-hive/">hadoop hive</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/markdown-02/" class="archive-article-date">
-  <time datetime="2017-08-03T01:05:32.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/markdown-02/">markdown-02</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown-01/" class="archive-article-date">
-  <time datetime="2017-08-02T07:39:41.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown-01/">Markdown-01</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown/" class="archive-article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown/">Markdown</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/01/frist-blog/" class="archive-article-date">
-  <time datetime="2017-08-01T12:17:32.000Z" itemprop="datePublished">8月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/frist-blog/">利用Hexo搭建个人博客－博客初始化篇</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

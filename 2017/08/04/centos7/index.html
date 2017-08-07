@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | ACL</title>
+  <title>centos7 | ACL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ACL">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1 设置装有 CentOS7 的笔记本合盖后黑屏但不进入睡眠模式systemd 能够处理某些电源相关的 ACPI事件，你可以通过从 /etc/system/logind.conf  以下选项进行配置：　　HandlePowerKey　　　　 按下电源键后的行为HandleSleepKey　　 　　按下挂起键后的行为HandleHibernateKey 　　按下休眠键后的行为HandleLidSwi">
+<meta name="keywords" content="centos7">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7">
+<meta property="og:url" content="http://yoursite.com/2017/08/04/centos7/index.html">
 <meta property="og:site_name" content="ACL">
+<meta property="og:description" content="1 设置装有 CentOS7 的笔记本合盖后黑屏但不进入睡眠模式systemd 能够处理某些电源相关的 ACPI事件，你可以通过从 /etc/system/logind.conf  以下选项进行配置：　　HandlePowerKey　　　　 按下电源键后的行为HandleSleepKey　　 　　按下挂起键后的行为HandleHibernateKey 　　按下休眠键后的行为HandleLidSwi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-05T00:12:18.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ACL">
+<meta name="twitter:title" content="centos7">
+<meta name="twitter:description" content="1 设置装有 CentOS7 的笔记本合盖后黑屏但不进入睡眠模式systemd 能够处理某些电源相关的 ACPI事件，你可以通过从 /etc/system/logind.conf  以下选项进行配置：　　HandlePowerKey　　　　 按下电源键后的行为HandleSleepKey　　 　　按下挂起键后的行为HandleHibernateKey 　　按下休眠键后的行为HandleLidSwi">
   
     <link rel="alternate" href="/atom.xml" title="ACL" type="application/atom+xml">
   
@@ -64,215 +69,75 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/maven/" class="archive-article-date">
-  <time datetime="2017-08-06T14:53:04.000Z" itemprop="datePublished">8月 6</time>
+        <section id="main"><article id="post-centos7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/04/centos7/" class="article-date">
+  <time datetime="2017-08-04T15:23:18.000Z" itemprop="datePublished">2017-08-04</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/centos7/">centos7</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/maven/">maven</a>
+    <h1 class="article-title" itemprop="name">
+      centos7
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/jdk/" class="archive-article-date">
-  <time datetime="2017-08-06T13:37:59.000Z" itemprop="datePublished">8月 6</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/jdk/">jdk</a>
-    </h1>
-  
+        <h1 id="1-设置装有-CentOS7-的笔记本合盖后黑屏但不进入睡眠模式"><a href="#1-设置装有-CentOS7-的笔记本合盖后黑屏但不进入睡眠模式" class="headerlink" title="1 设置装有 CentOS7 的笔记本合盖后黑屏但不进入睡眠模式"></a>1 设置装有 CentOS7 的笔记本合盖后黑屏但不进入睡眠模式</h1><p>systemd 能够处理某些电源相关的 ACPI事件，你可以通过从 /etc/system/logind.conf </p>
+<p>以下选项进行配置：　　<br>HandlePowerKey　　　　 按下电源键后的行为<br>HandleSleepKey　　 　　按下挂起键后的行为<br>HandleHibernateKey 　　按下休眠键后的行为<br>HandleLidSwitch　　　　合上笔记本盖后的行为<br><a id="more"></a><br>行为可以是 ignore、poweroff、reboot、halt、suspend、hibernate、hybrid-sleep、</p>
+<p>lock 或 kexec。</p>
+<p>系统默认设置为：</p>
+<p>HandlePowerKey=poweroff<br>HandleSuspendKey=suspend<br>HandleHibernateKey=hibernate<br>HandleLidSwitch=suspend</p>
+<p>只需要把HandleLidSwitch选项设置为如下即可：<br>HandleLidSwitch=lock</p>
+<p>注意：设置完成保存后运行 systemctl restart systemd-logind 命令才能使设置生效。</p>
+<h1 id="2-关闭防火墙"><a href="#2-关闭防火墙" class="headerlink" title="2 关闭防火墙"></a>2 关闭防火墙</h1><p>CentOS 7.0默认使用的是firewall作为防火墙<br> 关闭firewall<br>   systemctl stop firewalld.service #停止firewall<br>   systemctl disable firewalld.service #禁止firewall开机启动<br>   firewall-cmd –state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/nexus/" class="archive-article-date">
-  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">8月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/nexus/">nexus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/05/gitLab/" class="archive-article-date">
-  <time datetime="2017-08-04T23:39:29.000Z" itemprop="datePublished">8月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/04/centos7/" data-id="cj61giq9b000048vhycm3v8ua" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/gitLab/">gitLib</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/04/centos7/" class="archive-article-date">
-  <time datetime="2017-08-04T15:23:18.000Z" itemprop="datePublished">8月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/centos7/">centos7</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/">centos7</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/05/gitLab/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          gitLib
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/03/hadoop-hive/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hadoop hive</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/hadoop-hive/" class="archive-article-date">
-  <time datetime="2017-08-03T09:26:51.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/hadoop-hive/">hadoop hive</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/markdown-02/" class="archive-article-date">
-  <time datetime="2017-08-03T01:05:32.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/markdown-02/">markdown-02</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown-01/" class="archive-article-date">
-  <time datetime="2017-08-02T07:39:41.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown-01/">Markdown-01</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown/" class="archive-article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown/">Markdown</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/01/frist-blog/" class="archive-article-date">
-  <time datetime="2017-08-01T12:17:32.000Z" itemprop="datePublished">8月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/frist-blog/">利用Hexo搭建个人博客－博客初始化篇</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

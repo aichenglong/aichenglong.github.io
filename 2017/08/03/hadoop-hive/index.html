@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | ACL</title>
+  <title>hadoop hive | ACL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ACL">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="hive hive是基于hadoop的一个数据仓库工具,可以将结构化的数据文件映射为一张数据库表,并提供简单的sql查功能,可以将sql语句转换为mapreduce任务进行运行. Hive 构建在基于静态批处理的Hadoop 之上，Hadoop 通常都有较高的延迟并且在作业提交和调度的时候需要大量的开销。因此，Hive 并不能够在大规模数据集上实现低延迟快速的查询，例如，Hive 在几百MB 的数">
+<meta name="keywords" content="hive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hadoop hive">
+<meta property="og:url" content="http://yoursite.com/2017/08/03/hadoop-hive/index.html">
 <meta property="og:site_name" content="ACL">
+<meta property="og:description" content="hive hive是基于hadoop的一个数据仓库工具,可以将结构化的数据文件映射为一张数据库表,并提供简单的sql查功能,可以将sql语句转换为mapreduce任务进行运行. Hive 构建在基于静态批处理的Hadoop 之上，Hadoop 通常都有较高的延迟并且在作业提交和调度的时候需要大量的开销。因此，Hive 并不能够在大规模数据集上实现低延迟快速的查询，例如，Hive 在几百MB 的数">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-04T01:24:00.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ACL">
+<meta name="twitter:title" content="hadoop hive">
+<meta name="twitter:description" content="hive hive是基于hadoop的一个数据仓库工具,可以将结构化的数据文件映射为一张数据库表,并提供简单的sql查功能,可以将sql语句转换为mapreduce任务进行运行. Hive 构建在基于静态批处理的Hadoop 之上，Hadoop 通常都有较高的延迟并且在作业提交和调度的时候需要大量的开销。因此，Hive 并不能够在大规模数据集上实现低延迟快速的查询，例如，Hive 在几百MB 的数">
   
     <link rel="alternate" href="/atom.xml" title="ACL" type="application/atom+xml">
   
@@ -64,215 +69,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/maven/" class="archive-article-date">
-  <time datetime="2017-08-06T14:53:04.000Z" itemprop="datePublished">8月 6</time>
+        <section id="main"><article id="post-hadoop-hive" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/03/hadoop-hive/" class="article-date">
+  <time datetime="2017-08-03T09:26:51.000Z" itemprop="datePublished">2017-08-03</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hive/">hive</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/maven/">maven</a>
+    <h1 class="article-title" itemprop="name">
+      hadoop hive
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/jdk/" class="archive-article-date">
-  <time datetime="2017-08-06T13:37:59.000Z" itemprop="datePublished">8月 6</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/jdk/">jdk</a>
-    </h1>
-  
+        <h1 id="hive"><a href="#hive" class="headerlink" title="hive"></a>hive</h1><p> hive是基于hadoop的一个数据仓库工具,可以将结构化的数据文件映射为一张数据库表,并提供简单的sql查<br>功能,可以将sql语句转换为mapreduce任务进行运行.<br> Hive 构建在基于静态批处理的Hadoop 之上，Hadoop 通常都有较高的延迟并且在作业提交和调度的时候需要大量的开销。因此，Hive 并不能够在大规模数据集上实现低延迟快速的查询，例如，Hive 在几百MB 的数据集上执行查询一般有分钟级的时间延迟。因此，Hive 并不适合那些需要低延迟的应用，例如，联机事务处理（OLTP）。Hive 查询操作过程严格遵守Hadoop MapReduce 的作业执行模型，Hive 将用户的HiveQL 语句通过解释器转换为MapReduce 作业提交到Hadoop 集群上，Hadoop 监控作业执行过程，然后返回作业执行结果给用户。Hive 并非为联机事务处理而设计，Hive 并不提供实时的查询和基于行级的数据更新操作。Hive 的最佳使用场合是大数据集的批处理作业，例如，网络日志分析 </p>
+<h2 id="1-hive的作用与结构组成"><a href="#1-hive的作用与结构组成" class="headerlink" title="1 hive的作用与结构组成"></a>1 hive的作用与结构组成</h2><p>  hive 提供了一个类似于sql的数据查询分析编程接口。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/nexus/" class="archive-article-date">
-  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">8月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/nexus/">nexus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/05/gitLab/" class="archive-article-date">
-  <time datetime="2017-08-04T23:39:29.000Z" itemprop="datePublished">8月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/03/hadoop-hive/" data-id="cj61giqaa000f48vh92nw4bux" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/gitLab/">gitLib</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/04/centos7/" class="archive-article-date">
-  <time datetime="2017-08-04T15:23:18.000Z" itemprop="datePublished">8月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/centos7/">centos7</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hive/">hive</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/04/centos7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          centos7
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/03/markdown-02/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">markdown-02</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/hadoop-hive/" class="archive-article-date">
-  <time datetime="2017-08-03T09:26:51.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/hadoop-hive/">hadoop hive</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/markdown-02/" class="archive-article-date">
-  <time datetime="2017-08-03T01:05:32.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/markdown-02/">markdown-02</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown-01/" class="archive-article-date">
-  <time datetime="2017-08-02T07:39:41.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown-01/">Markdown-01</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown/" class="archive-article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown/">Markdown</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/01/frist-blog/" class="archive-article-date">
-  <time datetime="2017-08-01T12:17:32.000Z" itemprop="datePublished">8月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/frist-blog/">利用Hexo搭建个人博客－博客初始化篇</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

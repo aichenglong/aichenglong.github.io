@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | ACL</title>
+  <title>nexus | ACL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ACL">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="nexus 介绍  Nexus 是Maven仓库管理器 nexus 安装1 安装条件安装系统: centos7安装版本: nexus-3.5.0-02-unix.tar.gz安装前提:已经安装jdk7+或者以上版本并配置环境变量 (安装过程见jdk.md)">
+<meta name="keywords" content="nexus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nexus">
+<meta property="og:url" content="http://yoursite.com/2017/08/06/nexus/index.html">
 <meta property="og:site_name" content="ACL">
+<meta property="og:description" content="nexus 介绍  Nexus 是Maven仓库管理器 nexus 安装1 安装条件安装系统: centos7安装版本: nexus-3.5.0-02-unix.tar.gz安装前提:已经安装jdk7+或者以上版本并配置环境变量 (安装过程见jdk.md)">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/08/06/nexus/nexus/nexus_login.png">
+<meta property="og:updated_time" content="2017-08-06T15:53:45.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ACL">
+<meta name="twitter:title" content="nexus">
+<meta name="twitter:description" content="nexus 介绍  Nexus 是Maven仓库管理器 nexus 安装1 安装条件安装系统: centos7安装版本: nexus-3.5.0-02-unix.tar.gz安装前提:已经安装jdk7+或者以上版本并配置环境变量 (安装过程见jdk.md)">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/06/nexus/nexus/nexus_login.png">
   
     <link rel="alternate" href="/atom.xml" title="ACL" type="application/atom+xml">
   
@@ -64,215 +71,75 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/maven/" class="archive-article-date">
-  <time datetime="2017-08-06T14:53:04.000Z" itemprop="datePublished">8月 6</time>
+        <section id="main"><article id="post-nexus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/06/nexus/" class="article-date">
+  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">2017-08-06</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/nexus/">nexus</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/maven/">maven</a>
+    <h1 class="article-title" itemprop="name">
+      nexus
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/jdk/" class="archive-article-date">
-  <time datetime="2017-08-06T13:37:59.000Z" itemprop="datePublished">8月 6</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/jdk/">jdk</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/nexus/" class="archive-article-date">
-  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">8月 6</time>
-</a>
+        <h3 id="nexus-介绍"><a href="#nexus-介绍" class="headerlink" title="nexus 介绍"></a>nexus 介绍</h3><p>  Nexus 是Maven仓库管理器</p>
+<h3 id="nexus-安装"><a href="#nexus-安装" class="headerlink" title="nexus 安装"></a>nexus 安装</h3><h4 id="1-安装条件"><a href="#1-安装条件" class="headerlink" title="1 安装条件"></a>1 安装条件</h4><p>安装系统: centos7<br>安装版本: nexus-3.5.0-02-unix.tar.gz<br>安装前提:已经安装jdk7+或者以上版本并配置环境变量 (安装过程见jdk.md)<br><a id="more"></a></p>
+<h4 id="2-安装步骤"><a href="#2-安装步骤" class="headerlink" title="2 安装步骤:"></a>2 安装步骤:</h4><h5 id="1-安装nexus"><a href="#1-安装nexus" class="headerlink" title="1.安装nexus"></a>1.安装nexus</h5><ol>
+<li>下载 nexus-3.5.0-02-unix.tar.gz 并上传到 /opt 目录下<br>创建nexus目录<code>mkdir nexus</code><br>并解压 <code>tar -zxvf nexus-3.5.0-02-unix.tar.gz -C nexus</code></li>
+<li>启动nexus <code>/opt/nexus/nexus-3.5.0-02/bin/nexus start</code></li>
+</ol>
+<p>nexus 常用的一些命令:<code>/opt/nexus/nexus-3.5.0-02/bin/nexus {start|stop|run|run-redirect|status|restart|force-reload}</code></p>
+<h5 id="2-访问nexus"><a href="#2-访问nexus" class="headerlink" title="2.访问nexus"></a>2.访问nexus</h5><p>nexus启动后访问:<a href="http://192.168.199.133:8081出现以下页面说明启动成功" target="_blank" rel="external">http://192.168.199.133:8081出现以下页面说明启动成功</a>:<br><img src="nexus/nexus_login.png" alt="nexus login"></p>
+<h5 id="3配置nexus服务"><a href="#3配置nexus服务" class="headerlink" title="3配置nexus服务"></a>3配置nexus服务</h5>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/nexus/">nexus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/05/gitLab/" class="archive-article-date">
-  <time datetime="2017-08-04T23:39:29.000Z" itemprop="datePublished">8月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/06/nexus/" data-id="cj61giqaf000m48vhllx69f9p" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/gitLab/">gitLib</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/04/centos7/" class="archive-article-date">
-  <time datetime="2017-08-04T15:23:18.000Z" itemprop="datePublished">8月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/centos7/">centos7</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nexus/">nexus</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/06/jdk/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jdk
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/05/gitLab/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">gitLib</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/hadoop-hive/" class="archive-article-date">
-  <time datetime="2017-08-03T09:26:51.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/hadoop-hive/">hadoop hive</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/03/markdown-02/" class="archive-article-date">
-  <time datetime="2017-08-03T01:05:32.000Z" itemprop="datePublished">8月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/markdown-02/">markdown-02</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown-01/" class="archive-article-date">
-  <time datetime="2017-08-02T07:39:41.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown-01/">Markdown-01</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown/" class="archive-article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">8月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown/">Markdown</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/01/frist-blog/" class="archive-article-date">
-  <time datetime="2017-08-01T12:17:32.000Z" itemprop="datePublished">8月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/frist-blog/">利用Hexo搭建个人博客－博客初始化篇</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">
