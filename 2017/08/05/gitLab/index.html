@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="IC">
 <meta property="og:description" content="1 gitLab基本介绍 &amp;nbsp;&amp;nbsp;gitLab是利用Ruby on Rails一个开源的版本管理系统,实现一个自托管的git仓库项目,可以通过web界面进行访问公开的或者私人的项目.与github类似,gitLab能够浏览源代码,管理缺陷和注释.可以管理团队对仓库的访问,它非常容易与浏览器提交过的版本并提供一个文件历史库。团队逞能可以通过内置的简单聊天程序(wall)进行交流. 还">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab/gitLab_workflow.png">
-<meta property="og:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab/gitLab.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab_workflow.png">
+<meta property="og:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab.jpg">
 <meta property="og:updated_time" content="2017-08-06T00:52:42.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gitLib">
 <meta name="twitter:description" content="1 gitLab基本介绍 &amp;nbsp;&amp;nbsp;gitLab是利用Ruby on Rails一个开源的版本管理系统,实现一个自托管的git仓库项目,可以通过web界面进行访问公开的或者私人的项目.与github类似,gitLab能够浏览源代码,管理缺陷和注释.可以管理团队对仓库的访问,它非常容易与浏览器提交过的版本并提供一个文件历史库。团队逞能可以通过内置的简单聊天程序(wall)进行交流. 还">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab/gitLab_workflow.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/05/gitLab/gitLab_workflow.png">
   
     <link rel="alternate" href="/atom.xml" title="IC" type="application/atom+xml">
   
@@ -101,7 +101,7 @@
         <h1 id="1-gitLab基本介绍"><a href="#1-gitLab基本介绍" class="headerlink" title="1 gitLab基本介绍 "></a>1 gitLab基本介绍 </h1><p>&nbsp;&nbsp;gitLab是利用Ruby on Rails一个开源的版本管理系统,实现一个自托管的git仓库项目,可以通过web界面进行访问公开的或者私人的项目.<br>与github类似,gitLab能够浏览源代码,管理缺陷和注释.可以管理团队对仓库的访问,它非常容易与浏览器提交过的版本并提供一个文件历史库。团队逞能可以通过内置的简单聊天程序(wall)进行交流. 还提供一个代码片段收集功能可以轻松实现代码复用,并与日后有需要的时候进行查找.</p>
 <a id="more"></a>
 <h2 id="git的家族成员"><a href="#git的家族成员" class="headerlink" title="git的家族成员"></a>git的家族成员</h2><p>git:一种版本控制系统 是一个命令 一种工具<br>gitlib:用于实现git功能的开发库<br>gitHub:一个基于git实现的在线代码托管仓库,包含一个网状界面,向互联网开放.<br>GitLab:是一个基于Git实现的在线代码仓库托管软件，你可以用gitlab自己搭建一个类似于Github一样的系统，一般用于在企业、学校等内部网络搭建git私服。</p>
-<h2 id="gitlib的服务构成"><a href="#gitlib的服务构成" class="headerlink" title="gitlib的服务构成"></a>gitlib的服务构成</h2><p>Nginx：静态web服务器。<br>gitlab-shell：用于处理Git命令和修改authorized keys列表。<br>gitlab-workhorse: 轻量级的反向代理服务器。<br>logrotate：日志文件管理工具。<br>postgresql：数据库。<br>redis：缓存数据库。<br>sidekiq：用于在后台执行队列任务（异步执行）。<br>unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。<br>GitLab工作流程<br><img src="gitLab/gitLab_workflow.png" alt="gitLab_workflow"></p>
+<h2 id="gitlib的服务构成"><a href="#gitlib的服务构成" class="headerlink" title="gitlib的服务构成"></a>gitlib的服务构成</h2><p>Nginx：静态web服务器。<br>gitlab-shell：用于处理Git命令和修改authorized keys列表。<br>gitlab-workhorse: 轻量级的反向代理服务器。<br>logrotate：日志文件管理工具。<br>postgresql：数据库。<br>redis：缓存数据库。<br>sidekiq：用于在后台执行队列任务（异步执行）。<br>unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。<br>GitLab工作流程<br><img src="/2017/08/05/gitLab/gitLab_workflow.png" alt="gitLab_workflow"></p>
 <h2 id="GitLab-Shell"><a href="#GitLab-Shell" class="headerlink" title="GitLab Shell"></a>GitLab Shell</h2><p>&nbsp;&nbsp;GitLab shell有两个作用:为GitLab出来git命令、修改authorized keys列表.<br>当通过ssh访问GitLab Server时,GitLab shell会:</p>
 <ul>
 <li>限制执行与定义好的Git命令(git push,git pull,git annex)</li>
@@ -124,7 +124,7 @@
 <p>&nbsp;&nbsp;如果不太习惯使用命令管道的方式安装镜像仓库，你可以在这里找到 完整的安装脚本 或者 选择系统对应的安装包 使用下面的命令手动安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -LJO https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-XXX.rpm</div><div class="line">rpm -i gitlab-ce-XXX.rpm</div></pre></td></tr></table></figure></p>
 <p>3) 配置并启动GitLib<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlib-ctl reconfigure</div></pre></td></tr></table></figure></p>
 <p>4) 通过浏览器访问<br>&nbsp;&nbsp;第一次访问 GitLab，系统会重定向 url 到重置密码的页面，你需要输入初始化管理员账号的密码。 设置完成后，系统会重定向到登录界面，你就可以使用刚才输入的密码登录系统了。</p>
-<p>&nbsp;&nbsp;系统默认的管理员账号为 root， 登录系统后，你可以修改管理员账号为自己喜欢的账号。<br>安装成功后gitLab显示的页面<br><img src="gitLab/gitLab.jpg" alt="gitLab"></p>
+<p>&nbsp;&nbsp;系统默认的管理员账号为 root， 登录系统后，你可以修改管理员账号为自己喜欢的账号。<br>安装成功后gitLab显示的页面<br><img src="/2017/08/05/gitLab/gitLab.jpg" alt="gitLab"></p>
 <h2 id="2-gitLab注意事项以及异常故障排查"><a href="#2-gitLab注意事项以及异常故障排查" class="headerlink" title="2 gitLab注意事项以及异常故障排查:"></a>2 gitLab注意事项以及异常故障排查:</h2><ol>
 <li>默认安装登录需要重置root密码.可以自己单独设置一个复杂密码后登录</li>
 <li>gitlab本身采用80端口,如安装前服务器有启用80,安装完访问报错,需要更改gitLab的默认端口 修改vim /etc/gitlib/gitlab.rb<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">external_url &apos;localhost:90&apos;</div></pre></td></tr></table></figure>
@@ -145,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/05/gitLab/" data-id="cj61gmzkc0006novh1q40r1vb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/05/gitLab/" data-id="cj61gyjy300086cvh8jskq9by" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitLab/">gitLab</a></li></ul>
