@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: markdown | IC</title>
+  <title>docker | IC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IC">
-<meta property="og:url" content="http://icblog.cn/tags/markdown/index.html">
+  <meta name="description" content="简介：Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker">
+<meta property="og:url" content="http://icblog.cn/2017/08/07/docker/index.html">
 <meta property="og:site_name" content="IC">
+<meta property="og:description" content="简介：Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-08T01:10:55.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IC">
+<meta name="twitter:title" content="docker">
+<meta name="twitter:description" content="简介：Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。">
   
     <link rel="alternate" href="/atom.xml" title="IC" type="application/atom+xml">
   
@@ -64,39 +69,84 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/02/Markdown/" class="archive-article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">8月 2</time>
+        <section id="main"><article id="post-docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/docker/" class="article-date">
+  <time datetime="2017-08-07T12:58:28.000Z" itemprop="datePublished">2017-08-07</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/docker/">docker</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/Markdown/">Markdown</a>
+    <h1 class="article-title" itemprop="name">
+      docker
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>简介：Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。<br><a id="more"></a><br>Docker通常用于如下场景：<br>web应用的自动化打包和发布；<br>自动化测试和持续集成、发布；<br>在服务型环境中部署和调整数据库或其他的后台应用；<br>从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境。</p>
+<h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><h2 id="RHEL下安装docker-centos7"><a href="#RHEL下安装docker-centos7" class="headerlink" title="RHEL下安装docker(centos7)"></a>RHEL下安装docker(centos7)</h2><ol>
+<li>依赖检查 docker需要一个64位系统 内核版本必须大于3.10<br><code>username -r</code></li>
+<li><p>目前RHEL系统下面安装docker有两种方式 1:使用curl获得docker安装脚本进行安装 2 使用yum包管理器来安装docker<br>1: 使用脚本进行安装</p>
+<ol>
+<li>使用一个有sudo全新的账号登录RHEL系统</li>
+<li>更新现有的yum包<code>sudo yum update</code></li>
+<li>执行docker安装脚本 <code>curl -sSL https://get.docker.com/ | sh</code></li>
+<li>启动docker服务 <code>sudo service docker start</code></li>
+<li>确认docker安装成功 <code>sudo docker run hello-word</code></li>
+</ol>
+<p>2: 使用yum包安装</p>
+<ol>
+<li>使用有sudo权限的账号登录系统</li>
+<li>更新yum包. <code>sudo yum update</code></li>
+<li><p>添加docker源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/yum.repos.d/docker.repo 中添加</div><div class="line">[dockerrepo]</div><div class="line">name=Docker Repository</div><div class="line">baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div><div class="line">gpgkey=https://yum.dockerproject.org/gpg</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用yum命令安装docker  <code>sudo yum install docker-engine</code></p>
+</li>
+<li>启动docker服务 <code>sudo service docker start</code></li>
+<li>确认docker是否安装成功 <code>sudo docker run hello-word</code></li>
+</ol>
+</li>
+<li><p>设置docker服务自启动<br> <code>sudo chkconfig docker on</code></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icblog.cn/2017/08/07/docker/" data-id="cj62w6jhx0005ekvh13savnfy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/06/maven/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">maven</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
