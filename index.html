@@ -66,6 +66,88 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-logback" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/08/logback/" class="article-date">
+  <time datetime="2017-08-08T07:34:18.000Z" itemprop="datePublished">2017-08-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/08/logback/">logback</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、logback的介绍"><a href="#一、logback的介绍" class="headerlink" title="一、logback的介绍"></a>一、logback的介绍</h1><p>Logback是由log4j创始人设计的另一个开源日志组件,官方网站： <a href="http://logback.qos.ch。它当前分为下面下个模块：" target="_blank" rel="external">http://logback.qos.ch。它当前分为下面下个模块：</a><br>　　1. logback-core：其它两个模块的基础模块<br>　　2. logback-classic：它是log4j的一个改良版本，同时它完整实现了slf4j API使你可以很方便地更换成其它日志系统如log4j或JDK14 Logging<br>　　3 .logback-access：访问模块与Servlet容器集成提供通过Http来访问日志的功能<br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/08/08/logback/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icblog.cn/2017/08/08/logback/" data-id="cj63ctvw0000kjwvhbr16yxue" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-log" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/08/log/" class="article-date">
+  <time datetime="2017-08-08T06:50:08.000Z" itemprop="datePublished">2017-08-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/08/log/">log 日志</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="logback-slf4j-log4j之间的关系"><a href="#logback-slf4j-log4j之间的关系" class="headerlink" title="logback,slf4j,log4j之间的关系"></a>logback,slf4j,log4j之间的关系</h1><p>slf4j 是The Simple  Loggging Facade for java 的简称,是一种简单日志的门面抽象框架,他本身只提供了日志Facade API和一个检点的日志实现类,一般配合Log4j logBack ,java.util.logging使用,slf4j作为应用层的log接入时,程序可以根据实际应用场景动态调整地城的日志实现框架(Log4j/logBack/jdklog…)</p>
+<p>logBack和Log4j都是开源日志工具库,logBack是log4j的改良版本,比Log4j拥有更多的特性,同时也带来很大性能提升<br> logBack官方建议配合slf4j使用,这样可以灵活地替换地城日志框架</p>
+<h1 id="Logback的结构"><a href="#Logback的结构" class="headerlink" title="Logback的结构"></a>Logback的结构</h1><p>LogBack被分为3个组件，logback-core, logback-classic 和 logback-access.<br>其中logback-core提供了LogBack的核心功能，是另外两个组件的基础。<br>logback-classic则实现了Slf4j的API，所以当想配合Slf4j使用时，需要将logback-classic加入classpath。<br>logback-access是为了集成Servlet环境而准备的，可提供HTTP-access的日志接口；</p>
+<h1 id="Slf4j-Logback的快速实践"><a href="#Slf4j-Logback的快速实践" class="headerlink" title="Slf4j+Logback的快速实践"></a>Slf4j+Logback的快速实践</h1><p>spring-boot默认支持logback，所以无需引用任何以来只需要，配置application.properties即可，如果要功能丰富些，则配置下logback.xml。<br>一、在application.properties里配置的方式：<br><code>logging.file=./springboot.log</code></p>
+<p>这是最简便的方法，默认级别是info，要改级别的话还要在appliacation.properties里增加一行<br><code>logging.level.org.springframework.web=INFO</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icblog.cn/2017/08/08/log/" data-id="cj63ctvwa000wjwvhy4k6xc52" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-docker" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/docker/" class="article-date">
@@ -101,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/07/docker/" data-id="cj62w6jhx0005ekvh13savnfy" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/07/docker/" data-id="cj63ctvvu000ejwvhodhaezru" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
@@ -148,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/06/maven/" data-id="cj62w6jij000nekvhyj2kcz5e" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/06/maven/" data-id="cj63ctvw8000sjwvh7uzl6w1d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
@@ -195,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/06/jdk/" data-id="cj62w6jid000hekvhbk46duqq" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/06/jdk/" data-id="cj63ctvvp000cjwvhoy4zbslw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java-jdk/">java jdk</a></li></ul>
@@ -243,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/06/nexus/" data-id="cj62w6jim000rekvhsi23pq2i" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/06/nexus/" data-id="cj63ctvw5000qjwvhr9n77kci" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nexus/">nexus</a></li></ul>
@@ -290,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/05/gitLab/" data-id="cj62w6ji40008ekvhj3yknksp" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/05/gitLab/" data-id="cj63ctvvm0008jwvhhs6azdlc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitLab/">gitLab</a></li></ul>
@@ -338,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/04/centos7/" data-id="cj62w6jhv0003ekvhbmkmjde2" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/04/centos7/" data-id="cj63ctvv50001jwvh9rvl69lq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/">centos7</a></li></ul>
@@ -382,7 +464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/03/hadoop-hive/" data-id="cj62w6ji7000cekvhboas8rf7" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/03/hadoop-hive/" data-id="cj63ctvvj0006jwvham0x6yk8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hive/">hive</a></li></ul>
@@ -430,104 +512,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/03/markdown-02/" data-id="cj62w6jib000eekvhl9aogsmu" class="article-share-link">Share</a>
+      <a data-url="http://icblog.cn/2017/08/03/markdown-02/" data-id="cj63ctvw2000mjwvh7f1z697v" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Markdown-01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/02/Markdown-01/" class="article-date">
-  <time datetime="2017-08-02T07:39:41.000Z" itemprop="datePublished">2017-08-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/markdown/">markdown</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/02/Markdown-01/">Markdown-01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown-Basics-（快速入门–区段元素）"><a href="#Markdown-Basics-（快速入门–区段元素）" class="headerlink" title="Markdown: Basics （快速入门–区段元素）"></a>Markdown: Basics （快速入门–区段元素）</h1><h2 id="1-链接"><a href="#1-链接" class="headerlink" title="1 链接"></a>1 链接</h2><p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。</p>
-<p>不管是哪一种，链接文字都是用 [方括号] 来标记。<br>行内式的链接:在方括号后面紧接圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可.<br></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/08/02/Markdown-01/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/02/Markdown-01/" data-id="cj62w6jhl0000ekvh3x84t3ew" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/02/Markdown/" class="article-date">
-  <time datetime="2017-08-02T02:01:54.000Z" itemprop="datePublished">2017-08-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/markdown/">markdown</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/02/Markdown/">Markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown-Basics-（快速入门–区块元素）"><a href="#Markdown-Basics-（快速入门–区块元素）" class="headerlink" title="Markdown: Basics （快速入门–区块元素）"></a>Markdown: Basics （快速入门–区块元素）</h1><h2 id="1-段落换行"><a href="#1-段落换行" class="headerlink" title="1 段落换行"></a>1 段落换行</h2><p> 一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
-<p>「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的「Convert Line Breaks」选项），其它的格式会把每个换行符都转成 <br> 标签。</p>
-<h2 id="2-标题"><a href="#2-标题" class="headerlink" title="2 标题"></a>2 标题</h2><p> markDown 支持两种标题的语法,setext和atx形式.<br>Setext形式是用底线形式利用=(最高阶标题)和-(第二阶标题)</p>
-        
-          <p class="article-more-link">
-            <a href="/2017/08/02/Markdown/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://icblog.cn/2017/08/02/Markdown/" data-id="cj62w6jhq0001ekvh4w033v72" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-
     </footer>
   </div>
   
@@ -590,6 +577,14 @@
       <ul>
         
           <li>
+            <a href="/2017/08/08/logback/">logback</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/08/log/">log 日志</a>
+          </li>
+        
+          <li>
             <a href="/2017/08/07/docker/">docker</a>
           </li>
         
@@ -599,14 +594,6 @@
         
           <li>
             <a href="/2017/08/06/jdk/">jdk</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/06/nexus/">nexus</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/05/gitLab/">gitLib</a>
           </li>
         
       </ul>

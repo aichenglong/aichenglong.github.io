@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: nexus | IC</title>
+  <title>log 日志 | IC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IC">
-<meta property="og:url" content="http://icblog.cn/tags/nexus/index.html">
+  <meta name="description" content="logback,slf4j,log4j之间的关系slf4j 是The Simple  Loggging Facade for java 的简称,是一种简单日志的门面抽象框架,他本身只提供了日志Facade API和一个检点的日志实现类,一般配合Log4j logBack ,java.util.logging使用,slf4j作为应用层的log接入时,程序可以根据实际应用场景动态调整地城的日志实现框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="log 日志">
+<meta property="og:url" content="http://icblog.cn/2017/08/08/log/index.html">
 <meta property="og:site_name" content="IC">
+<meta property="og:description" content="logback,slf4j,log4j之间的关系slf4j 是The Simple  Loggging Facade for java 的简称,是一种简单日志的门面抽象框架,他本身只提供了日志Facade API和一个检点的日志实现类,一般配合Log4j logBack ,java.util.logging使用,slf4j作为应用层的log接入时,程序可以根据实际应用场景动态调整地城的日志实现框架">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-08T08:17:11.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IC">
+<meta name="twitter:title" content="log 日志">
+<meta name="twitter:description" content="logback,slf4j,log4j之间的关系slf4j 是The Simple  Loggging Facade for java 的简称,是一种简单日志的门面抽象框架,他本身只提供了日志Facade API和一个检点的日志实现类,一般配合Log4j logBack ,java.util.logging使用,slf4j作为应用层的log接入时,程序可以根据实际应用场景动态调整地城的日志实现框架">
   
     <link rel="alternate" href="/atom.xml" title="IC" type="application/atom+xml">
   
@@ -64,39 +68,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/06/nexus/" class="archive-article-date">
-  <time datetime="2017-08-06T13:20:20.000Z" itemprop="datePublished">8月 6</time>
+        <section id="main"><article id="post-log" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/08/log/" class="article-date">
+  <time datetime="2017-08-08T06:50:08.000Z" itemprop="datePublished">2017-08-08</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/nexus/">nexus</a>
+    <h1 class="article-title" itemprop="name">
+      log 日志
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="logback-slf4j-log4j之间的关系"><a href="#logback-slf4j-log4j之间的关系" class="headerlink" title="logback,slf4j,log4j之间的关系"></a>logback,slf4j,log4j之间的关系</h1><p>slf4j 是The Simple  Loggging Facade for java 的简称,是一种简单日志的门面抽象框架,他本身只提供了日志Facade API和一个检点的日志实现类,一般配合Log4j logBack ,java.util.logging使用,slf4j作为应用层的log接入时,程序可以根据实际应用场景动态调整地城的日志实现框架(Log4j/logBack/jdklog…)</p>
+<p>logBack和Log4j都是开源日志工具库,logBack是log4j的改良版本,比Log4j拥有更多的特性,同时也带来很大性能提升<br> logBack官方建议配合slf4j使用,这样可以灵活地替换地城日志框架</p>
+<h1 id="Logback的结构"><a href="#Logback的结构" class="headerlink" title="Logback的结构"></a>Logback的结构</h1><p>LogBack被分为3个组件，logback-core, logback-classic 和 logback-access.<br>其中logback-core提供了LogBack的核心功能，是另外两个组件的基础。<br>logback-classic则实现了Slf4j的API，所以当想配合Slf4j使用时，需要将logback-classic加入classpath。<br>logback-access是为了集成Servlet环境而准备的，可提供HTTP-access的日志接口；</p>
+<h1 id="Slf4j-Logback的快速实践"><a href="#Slf4j-Logback的快速实践" class="headerlink" title="Slf4j+Logback的快速实践"></a>Slf4j+Logback的快速实践</h1><p>spring-boot默认支持logback，所以无需引用任何以来只需要，配置application.properties即可，如果要功能丰富些，则配置下logback.xml。<br>一、在application.properties里配置的方式：<br><code>logging.file=./springboot.log</code></p>
+<p>这是最简便的方法，默认级别是info，要改级别的话还要在appliacation.properties里增加一行<br><code>logging.level.org.springframework.web=INFO</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://icblog.cn/2017/08/08/log/" data-id="cj63ctvwa000wjwvhy4k6xc52" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/08/logback/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          logback
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/07/docker/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">docker</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
